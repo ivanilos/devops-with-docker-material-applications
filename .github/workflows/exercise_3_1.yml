@@ -25,7 +25,6 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v6
         with:
-          context: . 
-          file: ./express-app/Dockerfile # Path to Dockerfile relative to context
+          context: express-app
           push: true
           tags: user/app:latest
