@@ -8,10 +8,6 @@ on:
 jobs:
   docker:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./express-app
-
     steps:
       -
         name: Login to Docker Hub
@@ -29,5 +25,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v6
         with:
+          context: . 
+          file: ./express-app/Dockerfile # Path to Dockerfile relative to context
           push: true
           tags: user/app:latest
