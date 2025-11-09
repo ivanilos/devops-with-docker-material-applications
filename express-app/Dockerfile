@@ -4,7 +4,7 @@ WORKDIR /usr/app
 
 COPY package*.json .
 
-RUN npm install --prefix ./express-app
+RUN npm install
 
 COPY . .
 
