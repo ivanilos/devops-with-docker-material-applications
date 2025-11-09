@@ -33,4 +33,4 @@ jobs:
         with:
           file: ./express-app/Dockerfile
           push: true
-          tags: ${{ vars.DOCKER_USERNAME }}/express-app:latest
+          tags: ${{ vars.DOCKERHUB_USERNAME }}/express-app:latest
