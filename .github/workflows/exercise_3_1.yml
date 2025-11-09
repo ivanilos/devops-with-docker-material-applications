@@ -30,6 +30,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v6
         with:
-          context: ./express-app
+          context: .
+          file: ./express-app/Dockerfile
           push: true
           tags: ${{ vars.DOCKERHUB_USERNAME }}/express-app:latest
